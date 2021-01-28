@@ -5,8 +5,9 @@ const consign = require('consign') //ajuda a carregar todos os modulos
 
 
 consign()
+    .include('./config/passport.js')
     .then('./config/middlewares.js')
-    .then('/api')
+    .then('./api')
     .then('./config/routes.js')
     .into(app)
 
